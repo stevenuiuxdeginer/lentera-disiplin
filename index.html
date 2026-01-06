@@ -568,7 +568,7 @@
         'Christian Baptista Montini', 'Devan Emeral Aldiano Tungga', 'Gordi Hariyanto',
         'Henri Leonardo Sarwijaya', 'Liony Skolastika Maspekeh', 'Marcellino Alvaro Haman',
         'Maria Nathania Bonita Day', 'Michele Alexa Nayla Jeramun', 'Monica Puspita Indah Purwaningsih',
-        'Ni Kadek Angela Suryani Dharma', 'Petera Penata', 'Puarla Ifa Jconya', 'Putri',
+        'Ni Kadek Angela Suryani Dharma', 'Petera Penata', 'Puarla Ifa Jconya', 'Zasqia Imelda Putri',
         'Renelisabeth Queensha Latif Naibaho', 'Yanuarius Septiano Hambut'],
             '11': ['Aloisia Maria Elisabeth Lewandowska', 'Beatriks Kiran Maharani',
         'Brigita Nathania Aleta Chandra Rasyid', 'Cecilia Putri Aquino Novaristi Wadhi',
@@ -612,14 +612,15 @@
 
         function populateYearOptions() {
             const yearSelect = document.getElementById('tahunAjaran');
-            const currentYear = new Date().getFullYear();
+            const startYear = 2025;
+            const endYear = 2049;
             
-            for (let year = currentYear; year <= 2049; year++) {
-                const option = document.createElement('option');
-                option.value = `${year}/${year + 1}`;
-                option.textContent = `${year}/${year + 1}`;
-                yearSelect.appendChild(option);
-            }
+            for (let year = startYear; year <= endYear; year++) {
+        const option = document.createElement('option');
+        option.value = `${year}/${year + 1}`;
+        option.textContent = `${year}/${year + 1}`;
+        yearSelect.appendChild(option);
+    }
         }
 
         function setCurrentDate() {
